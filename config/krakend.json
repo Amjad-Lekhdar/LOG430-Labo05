@@ -27,6 +27,57 @@
           "timeout": "5s"
         }
       ]
+    },
+    {
+      "endpoint": "/payments-api/payments/{payment_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/payments/{payment_id}",
+          "host": ["http://payments_api:5009"],
+          "timeout": "5s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/store-manager-api/orders",
+      "method": "POST",
+      "backend": [
+        {
+          "url_pattern": "/orders",
+          "host": ["http://store_manager:5000"],
+          "timeout": "5s"
+        }
+      ],
+      "extra_config": {
+        "qos/ratelimit/router": {
+          "max_rate": 200,
+          "every": "1m"
+        }
+      }
+    },
+    {
+      "endpoint": "/store-manager-api/orders",
+      "method": "PUT",
+      "backend": [
+        {
+          "url_pattern": "/orders",
+          "host": ["http://store_manager:5000"],
+          "timeout": "5s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/store-manager-api/test/slow/{delay}",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/test/slow/{delay}",
+          "host": ["http://store_manager:5000"],
+          "timeout": "5s"
+        }
+      ]
     }
+    
   ]
 }
