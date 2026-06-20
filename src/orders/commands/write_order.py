@@ -105,19 +105,27 @@ def modify_order(order_id: int, is_paid: bool):
         session.close()
 
 def request_payment_link(order_id, total_amount, user_id):
-    payment_id = 0
     payment_transaction = {
         "user_id": user_id,
         "order_id": order_id,
         "total_amount": total_amount
     }
 
-    # TODO: Requête à POST /payments
-    print("")
-    response_from_payment_service = {}
+    response_from_payment_service = requests.post(
+        'http://api-gateway:8080/payments-api/payments',
+        json=payment_transaction,
+        headers={'Content-Type': 'application/json'},
+        timeout=5
+    )
+    response_from_payment_service.raise_for_status()
 
-    if True: # if response.ok
-        print(f"ID paiement: {payment_id}")
+    response_data = response_from_payment_service.json()
+    payment_id = response_data.get("payment_id", response_data.get("id"))
+
+    if payment_id is None:
+        raise ValueError(f"Payment service response does not include a payment_id: {response_data}")
+
+    print(f"ID paiement: {payment_id}")
 
     return f"http://api-gateway:8080/payments-api/payments/process/{payment_id}" 
 

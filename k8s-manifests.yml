@@ -149,6 +149,7 @@ spec:
       containers:
         - name: store-manager
           image: nkinesis/store-manager:latest
+          imagePullPolicy: Always
           envFrom:
             - configMapRef:
                 name: app-config
