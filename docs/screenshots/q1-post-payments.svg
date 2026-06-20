@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1235" height="243" viewBox="0 0 1235 243">
+  <rect width="1235" height="243" fill="#151515"/>
+  <text x="14" y="24" fill="#2ea8ff" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">(.venv) </text>
+  <text x="78" y="24" fill="#00d66b" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">amjad@amjad-ASUS-Vivobook-16-M1607KA-M1607KA</text>
+  <text x="488" y="24" fill="#d7d7d7" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">:</text>
+  <text x="497" y="24" fill="#2ea8ff" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">~/Documents/LOG430/LOG430-Labo05/LOG430-Labo05</text>
+  <text x="906" y="24" fill="#d7d7d7" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">$ curl -i -X POST http://localhost:5009/payments -H</text>
+
+  <text x="14" y="44" fill="#d7d7d7" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">  "Content-Type: application/json"   -d '{"user_id":1,"order_id":1,"total_amount":49.99}'</text>
+  <text x="14" y="64" fill="#d7d7d7" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">HTTP/1.1 201 CREATED</text>
+  <text x="14" y="84" fill="#d7d7d7" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">Server: Werkzeug/3.1.8 Python/3.11.15</text>
+  <text x="14" y="104" fill="#d7d7d7" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">Date: Sat, 20 Jun 2026 03:43:35 GMT</text>
+  <text x="14" y="124" fill="#d7d7d7" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">Content-Type: application/json</text>
+  <text x="14" y="144" fill="#d7d7d7" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">Content-Length: 22</text>
+  <text x="14" y="164" fill="#d7d7d7" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">Connection: close</text>
+
+  <text x="14" y="204" fill="#d7d7d7" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">{</text>
+  <text x="32" y="224" fill="#d7d7d7" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">"payment_id": 3</text>
+  <text x="14" y="244" fill="#d7d7d7" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14">}</text>
+</svg>
